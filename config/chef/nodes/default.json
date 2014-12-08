@@ -1,0 +1,23 @@
+{
+  "run_list": [
+     "recipe[lpad]",
+     "recipe[lpad::users]",
+     "recipe[lpad::ssh]"
+  ],
+  "group" : "lpad",
+  "port" : 8989,
+  "user" : {
+     "name": "lpad",
+     "password": "$1$FBaTXdYo$asAx76oF6ijqWD0p.lkXI/"
+  },
+  "db": {
+     "root_password": "$1$FBaTXdYo$asAx76oF6ijqWD0p.lkXI/",
+     "user": {
+       "name": "lpad",
+       "password": "$1$FBaTXdYo$asAx76oF6ijqWD0p.lkXI/"
+     }
+  },
+  "automatic": {
+    "ipaddress": "192.168.89.8"
+  }
+}
