@@ -2,7 +2,11 @@
   "run_list": [
      "recipe[lpad]",
      "recipe[lpad::users]",
-     "recipe[lpad::ssh]"
+     "recipe[lpad::ssh]",
+     "recipe[lpad::nodejs]",
+     "recipe[lpad::rbenv]",
+     "recipe[lpad::redis]",
+     "recipe[lpad::nginx]"
   ],
   "group" : "lpad",
   "port" : 8989,

@@ -15,7 +15,11 @@ execute "yum-update" do
 end
 
 # install develop group
-# execute "yum-groupinstall 'Development Tools'"
+execute "install Development Tools" do
+  user "root"
+  command "yum -y groupinstall 'Development Tools'"
+  action :run
+end
 
 # set timezone
 bash "set timezone" do

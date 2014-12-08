@@ -10,7 +10,7 @@ bash "modify port" do
     sed -i '/Port.*/d' /etc/ssh/sshd_config
     echo 'Port #{node['port']}' >> /etc/ssh/sshd_config
   EOH
-  notifies :restart, "service[ssh]", :delayed
+  notifies :restart, "service[sshd]", :delayed
   not_if "grep -xq 'Port #{node['port']}' /etc/ssh/sshd_config"
 end
 

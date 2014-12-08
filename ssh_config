@@ -1,0 +1,11 @@
+Host default
+  HostName 192.168.89.8
+  User lpad
+  Port 8989
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication yes
+  IdentityFile /Users/dung-nguyen/.ssh/id_rsa
+  IdentitiesOnly yes
+  LogLevel FATAL
+
