@@ -24,7 +24,7 @@ service "nginx" do
 end
 
 # set custom nginx config
-template "/etc/nginx/conf.d/#{node['app']}" do
+template "/etc/nginx/conf.d/#{node['app']}.conf" do
   source "nginx.conf.erb"
   mode 0644
   owner node['user']['name']

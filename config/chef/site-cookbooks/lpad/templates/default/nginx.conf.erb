@@ -1,4 +1,6 @@
-stream unicorn {
+
+upstream unicorn {
+  # Path to Unicorn SOCK file
   server unix:/tmp/unicorn.<%= node['app'] %>.sock fail_timeout=0;
 }
 
@@ -29,4 +31,3 @@ server {
   error_page 500 502 503 504 /500.html;
   keepalive_timeout 5;
 }
-recipe[lpad::rbenv]"

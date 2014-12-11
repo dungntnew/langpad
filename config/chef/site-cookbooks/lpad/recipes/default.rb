@@ -21,6 +21,11 @@ execute "install Development Tools" do
   action :run
 end
 
+# install some packages
+%w[ gcc openssl-devel libyaml-devel readline-devel zlib-devel ].each do |pkg|
+  package "#{pkg}"
+end
+
 # set timezone
 bash "set timezone" do
   code <<-EOH
